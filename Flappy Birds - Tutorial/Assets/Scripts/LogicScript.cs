@@ -3,6 +3,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class LogicScript : MonoBehaviour
 {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadSceneAsync("MainMenu");
+        }
+    }
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
